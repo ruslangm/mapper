@@ -93,7 +93,7 @@ public class ChooseView extends VerticalLayout implements View {
     @NotNull
     private Button createBackButton(Navigator navigator) {
         Button backButton = new Button("Back", event -> navigator.navigateTo(MainUI.TITLE_VIEW));
-        backButton.setWidth(10, Unit.PICAS);
+        backButton.setWidth(12, Unit.PICAS);
         return backButton;
     }
 
@@ -111,7 +111,7 @@ public class ChooseView extends VerticalLayout implements View {
                 navigator.navigateTo(MainUI.MAPPING_VIEW);
             }
         });
-        nextWindowButton.setWidth(10, Unit.PICAS);
+        nextWindowButton.setWidth(12, Unit.PICAS);
         return nextWindowButton;
     }
 

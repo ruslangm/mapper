@@ -36,7 +36,7 @@ public class GeneratedMappingView extends VerticalLayout implements View {
         RadioButtonGroup<String> radioFileChooser = createRadioButtonGroup(model, area);
 
         Button downloadButton = new Button("Download file");
-        downloadButton.setWidth(10, Unit.PICAS);
+        downloadButton.setWidth(12, Unit.PICAS);
         downloadButton.addClickListener(event -> {
             resource = new StreamResource(() ->
                         new StringInputStream(generator.getGeneratedCode()), fileName);

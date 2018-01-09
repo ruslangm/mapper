@@ -24,23 +24,17 @@ public class TitleView extends VerticalLayout implements View {
     TitleView(Navigator navigator) {
         setSizeFull();
 
-        Image label = getLabel();
-        label.setWidth(45, Unit.PERCENTAGE);
-
         HorizontalLayout mainLayout = createFormsLayout();
         mainLayout.setWidth(100, Unit.PERCENTAGE);
         HorizontalLayout navigateButtons = createNavigateButtons(navigator);
 
         configureRepositoriesArea(repositoriesArea);
 
-        addComponent(label, 0);
-        addComponent(mainLayout, 1);
-        addComponent(repositoriesArea, 2);
-        addComponent(navigateButtons, 3);
-        setComponentAlignment(label, Alignment.TOP_CENTER);
+        addComponent(mainLayout, 0);
+        addComponent(repositoriesArea, 1);
+        addComponent(navigateButtons, 2);
         setComponentAlignment(mainLayout, Alignment.MIDDLE_CENTER);
         setComponentAlignment(repositoriesArea, Alignment.BOTTOM_CENTER);
-        setExpandRatio(label, 0.2f);
         setExpandRatio(mainLayout, 0.3f);
         setExpandRatio(repositoriesArea, 0.3f);
         setExpandRatio(navigateButtons, 0.2f);

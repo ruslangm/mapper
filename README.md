@@ -8,3 +8,5 @@ package jetty:run -Djetty.http.port=8080
 
 To stop the application add Maven goal:
 package jetty:stop
+
+![alt tag](view/src/main/resources/TitleView.png)

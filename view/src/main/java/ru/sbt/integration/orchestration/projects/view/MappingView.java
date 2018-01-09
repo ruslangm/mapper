@@ -60,9 +60,9 @@ public class MappingView extends VerticalLayout implements View {
 
     @NotNull
     private Button createButton(String text, Button.ClickListener listener) {
-        Button buttonAddMapping = new Button(text, listener);
-        buttonAddMapping.setWidth(10, Unit.PICAS);
-        return buttonAddMapping;
+        Button button = new Button(text, listener);
+        button.setWidth(12, Unit.PICAS);
+        return button;
     }
 
     private void initTree(HorizontalLayout layout) {
