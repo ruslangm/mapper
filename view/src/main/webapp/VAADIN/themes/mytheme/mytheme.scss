@@ -45,6 +45,7 @@
 
   .v-select-select {
     font-size: 18px;
+    overflow: auto;
   }
 
   textarea.v-textarea {
@@ -74,10 +75,6 @@
 
   .v-textarea-default {
     color: black;
-  }
-
-  .v-select-select {
-    overflow: auto;
   }
 }
 

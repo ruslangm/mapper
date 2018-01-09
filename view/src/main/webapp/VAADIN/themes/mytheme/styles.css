@@ -14773,6 +14773,7 @@ div.v-layout.v-horizontal.v-widget {
 
 .mytheme .v-select-select {
 	font-size: 18px;
+	overflow: auto;
 }
 
 .mytheme textarea.v-textarea {
@@ -14798,8 +14799,4 @@ div.v-layout.v-horizontal.v-widget {
 
 .mytheme .v-textarea-default {
 	color: black;
-}
-
-.mytheme .v-select-select {
-	overflow: auto;
 }

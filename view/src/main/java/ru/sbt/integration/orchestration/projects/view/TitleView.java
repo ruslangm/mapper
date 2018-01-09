@@ -108,13 +108,6 @@ public class TitleView extends VerticalLayout implements View {
         return nextWindowButton;
     }
 
-    @NotNull
-    private Image getLabel() {
-        String basePath = VaadinService.getCurrent().getBaseDirectory().getAbsolutePath();
-        return new Image("", new FileResource(new File(basePath +
-                "/resources/orc-logo.png")));
-    }
-
     private void getArtifacts() {
         MavenArtifact sourceArtifact = getArtifact(sourceForm);
         MavenArtifact destinationArtifact = getArtifact(destinationForm);
@@ -147,8 +140,8 @@ public class TitleView extends VerticalLayout implements View {
 
     private void configureForm(FormLayout form) {
         form.setMargin(false);
-        TextField groupID = new TextField("Group ID", "com.github.cwilper.fcrepo-misc");
-        TextField artifactID = new TextField("Artifact ID", "fcrepo-dto-core");
+        TextField groupID = new TextField("Group ID", "com.cloudesire.platform");
+        TextField artifactID = new TextField("Artifact ID", "common-dto");
         TextField version = new TextField("Version", "1.0.0");
         groupID.setWidth(100, Unit.PERCENTAGE);
         artifactID.setWidth(100, Unit.PERCENTAGE);

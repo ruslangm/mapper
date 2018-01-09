@@ -24,19 +24,16 @@ public class ChooseView extends VerticalLayout implements View {
     ChooseView(Navigator navigator, MavenArtifact source, MavenArtifact destination, List<String> repos) {
         setSizeFull();
 
-        Image label = getLabel();
-        label.setWidth(40, Unit.PERCENTAGE);
-
         HorizontalLayout listsLayout = createListsLayout(source, destination, repos);
-        listsLayout.setWidth(70, Unit.PERCENTAGE);
+        listsLayout.setWidth(90, Unit.PERCENTAGE);
         HorizontalLayout navigateButtons = createNavigateButtons(navigator);
 
-        addComponent(label);
         addComponent(listsLayout);
         addComponent(navigateButtons);
-        setComponentAlignment(label, Alignment.TOP_CENTER);
         setComponentAlignment(listsLayout, Alignment.MIDDLE_CENTER);
+        setExpandRatio(listsLayout, 0.7f);
         setComponentAlignment(navigateButtons, Alignment.BOTTOM_CENTER);
+        setExpandRatio(navigateButtons, 0.3f);
     }
 
     private HorizontalLayout createListsLayout(MavenArtifact source, MavenArtifact destination, List<String> repos) {
@@ -113,12 +110,5 @@ public class ChooseView extends VerticalLayout implements View {
         });
         nextWindowButton.setWidth(12, Unit.PICAS);
         return nextWindowButton;
-    }
-
-    @NotNull
-    private Image getLabel() {
-        String basePath = VaadinService.getCurrent().getBaseDirectory().getAbsolutePath();
-        return new Image("", new FileResource(new File(basePath +
-                "/resources/orc-logo.png")));
     }
 }
