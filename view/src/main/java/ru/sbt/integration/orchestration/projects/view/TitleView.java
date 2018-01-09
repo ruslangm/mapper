@@ -153,9 +153,9 @@ public class TitleView extends VerticalLayout implements View {
 
     private void configureForm(FormLayout form) {
         form.setMargin(false);
-        TextField groupID = new TextField("Group ID", "org.apache.nifi");
-        TextField artifactID = new TextField("Artifact ID", "nifi-client-dto");
-        TextField version = new TextField("Version", "1.4.0");
+        TextField groupID = new TextField("Group ID", "com.github.cwilper.fcrepo-misc");
+        TextField artifactID = new TextField("Artifact ID", "fcrepo-dto-core");
+        TextField version = new TextField("Version", "1.0.0");
         groupID.setWidth(100, Unit.PERCENTAGE);
         artifactID.setWidth(100, Unit.PERCENTAGE);
         version.setWidth(100, Unit.PERCENTAGE);
