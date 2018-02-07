@@ -4,7 +4,8 @@ It helps you to transform your dto from one to another.
 
 Mapper is based on recursive traversal of a class tree through reflection.
 Mapper has UI written with help of Vaadin and based on jetty servlet framework.
-You can choose multiple source classes and only one destination class.
+
+On the start page you need to specify GAV of artifact contains your class and repository contains this artifact. Then mapper downloads artifacts and ther classes in background thread using aether framework and let you choose multiple source classes and only one destination class.
 
 To launch the application just add Maven goal:
 package jetty:run -Djetty.http.port=8080
